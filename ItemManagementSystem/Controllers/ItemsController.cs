@@ -12,9 +12,11 @@ using Microsoft.Extensions.Configuration;
 using System.Data.OleDb;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ItemManagementSystem.Controllers
 {
+    [Authorize]
     public class ItemsController : Controller
     {
         private readonly ApplicationDbContext _context;
